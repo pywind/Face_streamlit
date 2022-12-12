@@ -11,7 +11,7 @@ ACCEPTED_PREFIX = ['.mp4', '.avi']
 
 # UI for the App
 def run():
-    st.title("Face Detection using OpenCV")
+    st.title("Violence Detection using OpenCV")
     # st.set_option('deprecation.showfileUploaderEncoding', False)
     with st.sidebar:
         st.markdown("# My Teams")
