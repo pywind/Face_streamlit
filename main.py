@@ -33,7 +33,7 @@ def run():
 
           #vs.release()
           tfile.close()
-        st.success(f"Result of recognite: {pred['violence']}")
+        st.success(f"Result of recognize: {pred['violence']}")
         st.info(f"Violence estimation: {pred['violence estimation']}")
         st.error(f"Time prediction: {pred['processing_time']}")
             # Show video
