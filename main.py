@@ -5,9 +5,10 @@ import gdown
 
 from keras.models import load_model
 
-url = 'https://drive.google.com/file/d/1lPWJTBOHQhhi_Up7TtndmJOq9-xMliwr/view?usp=sharing'
-output_path = 'model/model.h5'
-gdown.download(url, output_path, quiet=False,fuzzy=True)
+def download():
+    url = 'https://drive.google.com/file/d/1lPWJTBOHQhhi_Up7TtndmJOq9-xMliwr/view?usp=sharing'
+    output_path = 'model/model.h5'
+    gdown.download(url, output_path, quiet=False,fuzzy=True)
 
 #load model from file
 MODEL = load_model('model/model.h5')
@@ -47,4 +48,6 @@ def run():
 
 
 if __name__ == "__main__":
+    download()
     run()
+    
