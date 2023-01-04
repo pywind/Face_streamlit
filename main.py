@@ -50,7 +50,7 @@ def run():
 
 if __name__ == "__main__":
     output_path = 'model/model.h5'
-    if not os.path.exists(output_path):
-        download(output_path)
+    #if not os.path.exists(output_path):
+    download(output_path)
     run()
     
