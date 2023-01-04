@@ -7,17 +7,20 @@ from os import path
 
 from keras.models import load_model
 
-def download(output_path):
-    url = 'https://drive.google.com/file/d/1lPWJTBOHQhhi_Up7TtndmJOq9-xMliwr/view?usp=sharing'
+output_path = 'model/model.h5'
+url = 'https://drive.google.com/file/d/1lPWJTBOHQhhi_Up7TtndmJOq9-xMliwr/view?usp=sharing'
+if not os.path.exists(output_path):
     gdown.download(url, output_path, quiet=False,fuzzy=True)
-
 #load model from file
 MODEL = load_model('model/model.h5')
 
-ACCEPTED_PREFIX = ['.mp4', '.avi']
-
 # UI for the App
 def run():
+    
+
+
+    ACCEPTED_PREFIX = ['.mp4', '.avi']
+
     st.title("Violence Detection using OpenCV")
     # st.set_option('deprecation.showfileUploaderEncoding', False)
     with st.sidebar:
@@ -49,8 +52,7 @@ def run():
 
 
 if __name__ == "__main__":
-    output_path = 'model/model.h5'
+    
     #if not os.path.exists(output_path):
-    download(output_path)
     run()
     
