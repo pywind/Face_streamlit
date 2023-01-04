@@ -9,7 +9,7 @@ from keras.models import load_model
 
 def download():
     output_path = 'model/model.h5'
-    if path.exists(output_path):
+    if path.exists(output_path) is True:
         return 
     else:
         url = 'https://drive.google.com/file/d/1lPWJTBOHQhhi_Up7TtndmJOq9-xMliwr/view?usp=sharing'
