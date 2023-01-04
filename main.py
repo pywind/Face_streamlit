@@ -2,13 +2,18 @@ import streamlit as st
 import tempfile
 import predictor
 import gdown
+import os
+from os import path
 
 from keras.models import load_model
 
 def download():
-    url = 'https://drive.google.com/file/d/1lPWJTBOHQhhi_Up7TtndmJOq9-xMliwr/view?usp=sharing'
     output_path = 'model/model.h5'
-    gdown.download(url, output_path, quiet=False,fuzzy=True)
+    if path.exists(output_path):
+        return 
+    else:
+        url = 'https://drive.google.com/file/d/1lPWJTBOHQhhi_Up7TtndmJOq9-xMliwr/view?usp=sharing'
+        gdown.download(url, output_path, quiet=False,fuzzy=True)
 
 #load model from file
 MODEL = load_model('model/model.h5')
